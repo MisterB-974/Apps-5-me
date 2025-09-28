@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiches Mémo - Apprentissage du Vocabulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎭 Fiches Mémo - Likes & Dislikes en Anglais</h1>
+            <p>Apprenez les expressions pour exprimer vos goûts et préférences ! 🎨</p>
+        </div>
+        <div class="progress-section">
+            <h3>📊 Votre Progression</h3>
+            <div class="timer-section">
+                <div class="timer" id="timer">⏰ 00:00</div>
+                <div class="score" id="score">⭐ Score: 0</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="correctCount">0</div>
+                    <div>Correctes 😊</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="incorrectCount">0</div>
+                    <div>Incorrectes 😅</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="totalCount">0</div>
+                    <div>Total 🎯</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="accuracy">0%</div>
+                    <div>Précision 🎪</div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Les cartes seront générées par JavaScript -->
+        </div>
+        <div class="controls" id="controls" style="display: none;">
+            <p>Connaissiez-vous cette traduction ?</p>
+            <button class="btn btn-success" onclick="markAnswer(true)">✅ Oui, je savais</button>
+            <button class="btn btn-danger" onclick="markAnswer(false)">❌ Non, je ne savais pas</button>
+        </div>
+        <div class="feedback" id="feedback"></div>
+        <div class="controls">
+            <button class="btn" onclick="resetGame()">🔄 Recommencer</button>
+            <button class="btn" onclick="shuffleCards()">🔀 Mélanger</button>
+            <button class="btn" onclick="reviewErrors()" id="reviewBtn" style="display: none;">📚 Réviser les Erreurs</button>
+            <button class="btn" onclick="toggleMode()" id="modeBtn">🎯 Mode: Vocabulaire</button>
+        </div>
+        <div class="hint-section" id="hintSection" style="display: none;">
+            <div class="hint-box">
+                <h4>💡 Indice</h4>
+                <p id="hintText"></p>
+                <button class="btn btn-small" onclick="hideHint()">Fermer</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
