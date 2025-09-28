@@ -1,0 +1,13 @@
+/* All your CSS from the previous message goes here! */
+body {
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    min-height: 100vh;
+    color: #333;
+}
+/* ...rest of your CSS (copy everything from your previous 'style.css' reply)... */
